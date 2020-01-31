@@ -1,1 +1,109 @@
-uhuhihiu
+
+<html>
+    <head>
+    <title>Bob Ross Painting</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="https://static.codehs.com/gulp/03a417aeed59e61368048f639c44e76bd7b3a2c5/chs-js-lib/chs.js"></script>
+    
+    
+    <style>
+    canvas {
+        border: 1px solid black;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    pre {
+        border: 1px solid black;
+        display: inline-block;
+        width: 400px;
+        height: 500px;
+        background-color: #F5F5F5;
+    }
+    </style>
+    
+    </head>
+    
+    <body>
+    <h1>Bob Ross Painting</h1>
+    
+    
+    
+    <canvas
+    width="400"
+    height="500"
+    class="codehs-editor-canvas"></canvas>
+    
+    
+    <script>
+    window.onload = function() {
+    
+        /*
+        Name:
+        Website:
+    */
+    
+    function start(){
+        
+        var Sky = new Rectangle(400,500);
+        Sky.setPosition(0,0);
+        Sky.setColor("#B3E5FF");
+        add(Sky);
+    
+        var Sea = new Rectangle(400,200);
+        Sea.setPosition(0,300);
+        Sea.setColor("#3377FF");
+        add(Sea);
+        
+        var Rock = new Rectangle(175,200);
+        Rock.setPosition(0,300);
+        Rock.setColor("#4D3300");
+        add(Rock);
+        
+        var Rock2 = new Arc(100, 0, 90, 0);
+        Rock2.setPosition(0, 300);
+        Rock2.setColor("#4D3300");
+        add(Rock2);
+        
+        var Sun = new Circle(45);
+        Sun.setPosition(300, 100);
+        Sun.setColor("#FF5533");
+        add(Sun);
+
+        var pole = new Rectangle(30, 20);
+        pole.setPosition(123, 130);
+        pole.setColor(Color.black);
+        add(pole);
+
+        var pole2 = new Rectangle(15, 20);
+        pole2.setPosition(123, 130);
+        pole2.setColor(Color.black);
+        add(pole2);
+
+        var lighthouse = new Rectangle(55, 150);
+        lighthouse.setPosition(110, 150);
+        lighthouse.setColor(Color.white);
+        add(lighthouse);
+
+        var light = new Circle(20);
+        light.setPosition(138, 130);
+        light.setColor(Color.yellow);
+        add(light);
+
+        
+
+    }
+    
+
+    
+        if (typeof start === 'function') {
+            start();
+        }
+    };
+    </script>
+    
+    </body>
+    </html>
+    
