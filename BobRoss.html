@@ -38,7 +38,7 @@
     
     
     <script>
-    window.onload = function() {
+window.onload = function(){
     
         /*
         Name:
@@ -72,15 +72,38 @@
         Sun.setColor("#FF5533");
         add(Sun);
 
+        drawLighthouse();
+        
+        drawTree();
+    }
+    
+    function drawTree(){
+        var wood = new Rectangle(30, 20);
+        wood.setPosition(40,400);
+        wood.setColor(Color.black);
+        add(wood);
+
+        var tree = new Arc(100, 0, 30, 0);
+        tree.setPosition(35, 350);
+        tree.setColor(Color.green);
+        add(tree);
+}
+
+    function drawLighthouse(){
         var pole = new Rectangle(30, 20);
         pole.setPosition(123, 130);
         pole.setColor(Color.black);
         add(pole);
 
-        var pole2 = new Rectangle(15, 20);
-        pole2.setPosition(123, 130);
+        var pole2 = new Rectangle(5, 40);
+        pole2.setPosition(110,110);
         pole2.setColor(Color.black);
         add(pole2);
+
+        var pole3 = new Rectangle(5, 40);
+        pole3.setPosition(160,110);
+        pole3.setColor(Color.black);
+        add(pole3);
 
         var lighthouse = new Rectangle(55, 150);
         lighthouse.setPosition(110, 150);
@@ -92,10 +115,11 @@
         light.setColor(Color.yellow);
         add(light);
 
-        
-
+        var dome = new Arc(28, 0 , 180, 0);
+        dome.setPosition(138, 110);
+        dome.setColor(Color.black);
+        add(dome);
     }
-    
 
     
         if (typeof start === 'function') {
